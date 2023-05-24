@@ -14,7 +14,7 @@ const TasksList = () => {
     return (
         <div>
             <header>
-                <h1>Tasks 10</h1>
+                <h1>Tasks {stateTasks.length}</h1>
                 <Link to="create">Create Task</Link>
             </header>
             {stateTasks.map(task => (
@@ -22,6 +22,7 @@ const TasksList = () => {
                     <h3>{task.title}</h3>
                     <p>{task.description}</p>
                     <button onClick={()=>handleDelete(task.id)}>Delete</button>
+                    <Link to={`/edit/${task.id}`}>Edit</Link>
                 </div>
             ))}
         </div>

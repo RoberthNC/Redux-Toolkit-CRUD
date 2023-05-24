@@ -9,6 +9,7 @@ const App = () => {
       <Routes>
         <Route path="/" exact element={<TasksList />} />
         <Route path="/create" exact element={<TaskForm />} />
+        <Route path="/edit/:id" exact element={<TaskForm />} />
       </Routes>
     </Router>
   )
